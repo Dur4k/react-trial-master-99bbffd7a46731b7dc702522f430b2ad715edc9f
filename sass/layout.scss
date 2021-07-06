@@ -1,10 +1,22 @@
 .xanda-react-trial {
-	text-align: center;
-	padding: 20px;
-	font-family: 'Helvetica';
+  text-align: center;
+  padding: 20px;
+  font-family: "Helvetica";
 
-	h1 {
-		font-size: 24px;
-		color: #81B4DE;
-	}
+  h1 {
+    font-size: 24px;
+    color: #81b4de;
+  }
+}
+
+.gameContainer {
+  background: red;
+  width: full;
+  height: 400px;
+  display: flex;
+  flex: flex-row;
+}
+.cont {
+  flex: flex;
+  width: 40px;
 }

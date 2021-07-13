@@ -1,22 +1,9 @@
-.xanda-react-trial {
-  text-align: center;
-  padding: 20px;
-  font-family: "Helvetica";
-
-  h1 {
-    font-size: 24px;
-    color: #81b4de;
-  }
-}
-
-.gameContainer {
-  background: red;
+body {
+  background: gray;
   width: full;
-  height: 400px;
+  height: full;
   display: flex;
-  flex: flex-row;
-}
-.cont {
-  flex: flex;
-  width: 40px;
+  align-items: center;
+  padding: 0;
+  // overflow: hidden;
 }

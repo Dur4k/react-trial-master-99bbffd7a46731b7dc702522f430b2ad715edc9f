@@ -2,14 +2,14 @@ import SWimg from "../assets/game1.jpg";
 import DLimg from "../assets/game2.jpg";
 import BBimg from "../assets/game3.jpg";
 import Eimg from "../assets/game4.jpg";
-const gamesData = [
+const products = [
   {
     _id: "1",
     name: "Star Wars",
     description: "immerse yourself in the Ultimate Star Wars exprrince",
     image: SWimg,
     price: 300,
-    inStock: 1,
+    stock: 1,
   },
   {
     _id: "2",
@@ -17,7 +17,7 @@ const gamesData = [
     description: "Dying Light is an open word first person survival horror action-advanture video game developed by Techland",
     image: DLimg,
     price: 500,
-    inStock: 1,
+    stock: 1,
   },
   {
     _id: "3",
@@ -25,7 +25,7 @@ const gamesData = [
     description: "Bloodborne is an action role-playing game developed by FormSoftwere",
     image: BBimg,
     price: 999,
-    inStock: 1,
+    stock: 1,
   },
   {
     _id: "4",
@@ -33,8 +33,8 @@ const gamesData = [
     description: "Evolve is first-person shooter video game developed by Rock Studios",
     image: Eimg,
     price: 150,
-    inStock: 1,
+    stock: 1,
   },
 ];
 
-export default gamesData;
+export default products;

@@ -1,6 +1,6 @@
 @import "/Nav/nav.scss";
 @import "/Product/product.scss";
-
+@import "/Cart/cart.scss";
 html,
 body {
   margin: 0;
@@ -40,7 +40,7 @@ body {
 }
 
 .product_container {
-  width: 75rem;
+  width: 57rem;
   height: auto;
   z-index: 999;
   position: relative;
@@ -48,5 +48,5 @@ body {
   flex-wrap: wrap;
   gap: 2rem;
   padding-left: 6rem;
-  margin-top: 6rem;
+  margin-top: 10rem;
 }

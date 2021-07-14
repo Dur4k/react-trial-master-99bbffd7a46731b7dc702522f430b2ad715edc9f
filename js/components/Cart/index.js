@@ -3,23 +3,24 @@ import React, { useRef } from "react";
 import useOnClickOutside from "../../hooks/useOnClickOutside";
 
 export default function Cart({ isToggle, setToggle, carts, removeProductFromCart, clearCart }) {
-  const $sideBarRef = useRef();
-
   // # handle the onclick outside
-  useOnClickOutside($sideBarRef, () => setToggle(false));
 
   console.log(carts);
 
   return (
-    <div>
+    <div className="basket">
+      <h1>Basket</h1>
       <div onClick={() => setToggle(true)}>
         <div>{carts.length}</div>
       </div>
 
-      <div ref={$sideBarRef} className={isToggle ? "expand" : "shrink"}>
+      <div className={isToggle ? "expand" : "shrink"}>
         <div>shopping cart</div>
         {carts.length === 0 ? (
-          <div>Empty Cart</div>
+          <div>
+            <div>No items</div>
+            <button>Continue</button>
+          </div>
         ) : (
           carts.map(({ product, quantity }) => (
             <div key={product.id}>

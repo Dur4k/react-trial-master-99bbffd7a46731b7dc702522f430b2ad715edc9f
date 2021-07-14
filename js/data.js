@@ -4,7 +4,7 @@ import BBimg from "../assets/game3.jpg";
 import Eimg from "../assets/game4.jpg";
 const products = [
   {
-    _id: "1",
+    id: "1",
     name: "Star Wars",
     description: "immerse yourself in the Ultimate Star Wars exprrince",
     image: SWimg,
@@ -12,7 +12,7 @@ const products = [
     stock: 1,
   },
   {
-    _id: "2",
+    id: "2",
     name: "Daying Light",
     description: "Dying Light is an open word first person survival horror action-advanture video game developed by Techland",
     image: DLimg,
@@ -20,7 +20,7 @@ const products = [
     stock: 1,
   },
   {
-    _id: "3",
+    id: "3",
     name: "Bloodborne",
     description: "Bloodborne is an action role-playing game developed by FormSoftwere",
     image: BBimg,
@@ -28,7 +28,7 @@ const products = [
     stock: 1,
   },
   {
-    _id: "4",
+    id: "4",
     name: "Evolve",
     description: "Evolve is first-person shooter video game developed by Rock Studios",
     image: Eimg,

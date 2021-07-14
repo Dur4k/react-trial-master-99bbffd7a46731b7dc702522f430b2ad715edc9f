@@ -43,7 +43,7 @@ export default function Product({ addProductToCart, ...props }) {
               </div>
             </div>
             {/* other opne */}
-            <button>Add to Basket</button>
+            <button onClick={() => addProductToCart({ ...props })}>Add to Basket</button>
           </div>
         </div>
         <img className="joyBackgroundImg" src={joyBackgroundImg} alt="joy" />

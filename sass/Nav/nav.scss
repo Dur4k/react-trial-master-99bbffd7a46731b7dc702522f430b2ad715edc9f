@@ -1,7 +1,27 @@
 .nav {
   width: full;
-  height: 10rem;
+  height: 2rem;
   background: black;
   display: flex;
   flex-direction: row;
+  color: white;
+  text-align: center;
+  align-items: center;
+  font-size: 0.8rem;
+  padding-left: 6rem;
+
+  .nav_left,
+  .nav_right {
+    display: flex;
+    flex-direction: row;
+    width: 10rem;
+  }
+
+  .nav_logo {
+    display: flex;
+    justify-content: center;
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-right: 0.3rem;
+  }
 }

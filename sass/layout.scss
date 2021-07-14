@@ -1,9 +1,52 @@
+@import "/Nav/nav.scss";
+@import "/Product/product.scss";
+
+html,
 body {
-  background: gray;
-  width: full;
-  height: full;
-  display: flex;
-  align-items: center;
+  margin: 0;
   padding: 0;
-  // overflow: hidden;
+}
+
+.screen {
+  position: relative;
+  background: gray;
+  width: auto;
+  height: 100vh;
+  // display: flex;
+  // align-items: center;
+  overflow: hidden;
+  font-family: "Helvetica";
+  .bg_img {
+    position: absolute;
+    top: 22;
+    background-image: url("https://img.wallpapersafari.com/desktop/1920/1080/35/30/3YhTx1.jpg");
+    background-size: cover;
+    background-color: black;
+    height: 20rem;
+    width: 100%;
+    filter: contrast(140%) brightness(36%);
+    z-index: 10;
+
+    // z-index: -1;
+  }
+  .logo_topImg {
+    position: absolute;
+    top: 22;
+    width: 15rem;
+    margin-top: 1.5rem;
+    padding-left: 6rem;
+    z-index: 330;
+  }
+}
+
+.product_container {
+  width: 75rem;
+  height: auto;
+  z-index: 999;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-left: 6rem;
+  margin-top: 6rem;
 }

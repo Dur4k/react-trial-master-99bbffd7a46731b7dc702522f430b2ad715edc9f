@@ -1,15 +1,15 @@
 import React from "react";
-import flagImg from "../flag.png";
-import telephoneImg from "../telephone.png";
+import flagImg from "../../../assets/flag.png";
+import telephoneImg from "../../../assets/telephone.png";
 const Nav = ({ phoneNumber }) => {
   return (
     <div className="nav">
-      <div>
-        <img src={telephoneImg} alt="telephone" />
+      <div className="nav_left">
+        <img class="nav_logo" src={telephoneImg} alt="telephone" />
         <div>{phoneNumber}</div>
       </div>
-      <div>
-        <img src={flagImg} alt="flag" />
+      <div className="nav_right">
+        <img class="nav_logo" src={flagImg} alt="flag" />
         <div>Try another Castle</div>
       </div>
     </div>

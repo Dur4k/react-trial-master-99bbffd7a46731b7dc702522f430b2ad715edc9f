@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
-
+import coinsImg from "/Users/durcak/Desktop/react-trial-master-99bbffd7a46731b7dc702522f430b2ad715edc9f/assets/coins.png";
 import Context from "../../store/Context";
+import joyBackgroundImg from "/Users/durcak/Desktop/react-trial-master-99bbffd7a46731b7dc702522f430b2ad715edc9f/assets/controller.png";
 
 export default function Product({ addProductToCart, ...props }) {
   const [isHover, setHover] = useState(false);
@@ -25,16 +26,27 @@ export default function Product({ addProductToCart, ...props }) {
     }
   }
   return (
-    <div onMouseEnter={() => handleMouseEnter()} onMouseLeave={() => handleMouseLeave()}>
-      {isHover && <div onClick={() => addProductToCart({ ...props })}></div>}
+    <div>
+      <div className="card">
+        {/* <div onClick={() => addProductToCart({ ...props })}></div> */}
 
-      <div>
-        <img src={props.image} />
-        <div>
-          <div>{props.name}</div>
-          <div>${props.price}</div>
-          <div>{props.stock}</div>
+        <div className="card_picture">
+          <img className="game_thumb" src={props.image} />
+          <div className="divider">
+            {/* make other flex column */}
+            <div className="card_desc">
+              <h3>{props.name}</h3>
+              <div className="text">{props.description}</div>
+              <div className="price">
+                <img src={coinsImg} alt="" />
+                {props.price} Gil
+              </div>
+            </div>
+            {/* other opne */}
+            <button>Add to Basket</button>
+          </div>
         </div>
+        <img className="joyBackgroundImg" src={joyBackgroundImg} alt="joy" />
       </div>
     </div>
   );

@@ -10,9 +10,9 @@ export default function App() {
   const [isToggle, setToggle] = useState(false);
   const context = useContext(Context);
 
-  useEffect(() => {
-    console.log(context);
-  }, [context]);
+  // useEffect(() => {
+  //   console.log(context);
+  // }, [context]);
 
   return (
     <div className="screen">

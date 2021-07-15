@@ -18,18 +18,33 @@
   }
 
   .game_container {
-    display: flex;
     justify-content: center;
     align-items: center;
-    height: 74%;
-    width: 100%;
     text-align: center;
 
     h2 {
       font-weight: 200;
       font-size: 1.4rem;
+      color: rgba(73, 73, 71, 1);
+      margin-top: 300%;
+    }
+  }
 
-      opacity: 60%;
+  .total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 1rem;
+    .total_text {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: rgba(73, 73, 71, 1);
+    }
+    .total_price {
+      font-size: 1.2rem;
+      font-weight: 900;
     }
   }
 
@@ -39,6 +54,7 @@
     text-align: center;
     justify-content: center;
     align-items: flex-end;
+    flex-shrink: 0;
 
     button {
       font-weight: 700;
@@ -50,6 +66,7 @@
       border-radius: 2rem;
       border: none;
       cursor: pointer;
+      margin-top: 2rem;
     }
   }
   //with items
@@ -112,10 +129,82 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        // padding-right: 4rem;
+        cursor: pointer;
         img {
           width: 1.1rem;
         }
+      }
+    }
+  }
+}
+
+.basket_active {
+  height: 77%;
+  width: 100vh;
+  background-color: rgba(74, 216, 127, 1);
+  z-index: 9999 !important;
+  position: absolute;
+  //   right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1 auto 1;
+  padding-left: 10rem;
+
+  .listOfProducts:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+  .listOfProducts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 0.8px solid black;
+
+    .left {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      .name {
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.01rem;
+        margin-bottom: 0.3rem;
+      }
+
+      img {
+        width: 3rem;
+        height: 3.8rem;
+        margin-right: 1rem;
+      }
+
+      .price {
+        font-weight: 700;
+        font-size: 0.7rem;
+        display: flex;
+        align-items: center;
+
+        img {
+          margin-right: 0.5rem;
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+    }
+
+    .bin {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      img {
+        width: 1.1rem;
       }
     }
   }

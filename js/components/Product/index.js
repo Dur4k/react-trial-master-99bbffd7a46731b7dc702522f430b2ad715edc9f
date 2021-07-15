@@ -15,11 +15,24 @@ export default function Product({ addProductToCart, ...props }) {
     if (rightArray[0].quantity === props.stock) {
       return (
         <div>
-          <img src={props.image} />
-          <div>
-            <div>{props.name}</div>
-            <div>Out of Stock</div>
-            <div>out of stock</div>
+          <div className="card  ">
+            <div className="card_emty">
+              <div className="card_picture">
+                <img className="game_thumb" src={props.image} />
+                <div className="divider">
+                  <div className="card_desc">
+                    <h3>{props.name}</h3>
+                    <div className="text">{props.description}</div>
+                    <div className="price">
+                      <img src={coinsImg} alt="" />
+                      {props.price} Gil
+                    </div>
+                  </div>
+                  <button>Add to Basket</button>
+                </div>
+              </div>
+            </div>
+            <img className="joyBackgroundImg" src={joyBackgroundImg} alt="joy" />
           </div>
         </div>
       );
@@ -38,6 +51,7 @@ export default function Product({ addProductToCart, ...props }) {
               <h3>{props.name}</h3>
               <div className="text">{props.description}</div>
               <div className="price">
+                <div></div>
                 <img src={coinsImg} alt="" />
                 {props.price} Gil
               </div>

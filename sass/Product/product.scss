@@ -11,17 +11,10 @@
   .card_picture {
     display: flex;
 
-    // justify-self: center;
-    // justify-content: center;
-    // align-items: center;
-
     .game_thumb {
       width: 10rem;
       height: 12rem;
       clip-path: inset(3px 7px 8px 4px);
-      //   object-fit: cover;
-      //   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      //   -moz-border-radius-top: 50px;
     }
   }
   .divider {
@@ -86,5 +79,12 @@
     right: 0;
     bottom: 0;
     z-index: 0;
+  }
+}
+
+.card_emty {
+  opacity: 30%;
+  button {
+    pointer-events: none;
   }
 }

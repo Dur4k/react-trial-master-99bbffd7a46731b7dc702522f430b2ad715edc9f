@@ -5,7 +5,7 @@ import Eimg from "../assets/game4.jpg";
 const products = [
   {
     id: "1",
-    name: "Star Wars",
+    name: "Star Wars: Battlefront",
     description: "immerse yourself in the Ultimate Star Wars exprrince",
     image: SWimg,
     price: 300,

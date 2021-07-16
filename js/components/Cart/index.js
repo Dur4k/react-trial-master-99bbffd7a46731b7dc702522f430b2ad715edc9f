@@ -1,21 +1,17 @@
 import React, { useState } from "react";
-import binImg from "/Users/durcak/Desktop/react-trial-master-99bbffd7a46731b7dc702522f430b2ad715edc9f/assets/bin.png";
-import coinsImg from "/Users/durcak/Desktop/react-trial-master-99bbffd7a46731b7dc702522f430b2ad715edc9f/assets/coins.png";
-import useOnClickOutside from "../../hooks/useOnClickOutside";
+import binImg from "../../../assets/bin.png";
+import coinsImg from "../../../assets/coins.png";
 
-export default function Cart({ isToggle, setToggle, carts, removeProductFromCart, clearCart }) {
+export default function Cart({ carts, removeProductFromCart }) {
   const emptyCart = carts.length === 0;
   const [active, setActive] = useState(false);
-  console.log(carts);
 
   return (
     <div className={active ? "basket_active" : "basket"}>
       <div>
         <h1>Basket</h1>
       </div>
-      {/* <div onClick={() => setToggle(true)}></div> */}
 
-      {/* <div className={isToggle ? "expand" : "shrink"}> */}
       <div className="game_container">
         {emptyCart ? (
           <div className="item">

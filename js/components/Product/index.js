@@ -1,18 +1,14 @@
-import React, { useState, useContext } from "react";
-import coinsImg from "/Users/durcak/Desktop/react-trial-master-99bbffd7a46731b7dc702522f430b2ad715edc9f/assets/coins.png";
+import React, { useContext } from "react";
+import coinsImg from "../../../assets/coins.png";
 import Context from "../../store/Context";
-import joyBackgroundImg from "/Users/durcak/Desktop/react-trial-master-99bbffd7a46731b7dc702522f430b2ad715edc9f/assets/controller.png";
+import joyBackgroundImg from "../../../assets/controller.png";
 
 export default function Product({ addProductToCart, ...props }) {
-  const [isHover, setHover] = useState(false);
   const context = useContext(Context);
-  const rightArray = context.carts.filter((p) => p.product.id === props.id);
-  // console.log(rightArray[0].quantity);
-  // console.log(props);
-  const handleMouseEnter = () => setHover(true);
-  const handleMouseLeave = () => setHover(false);
-  if (rightArray[0]) {
-    if (rightArray[0].quantity === props.stock) {
+
+  const checkQuantityOfArray = context.carts.filter((p) => p.product.id === props.id);
+  if (checkQuantityOfArray[0]) {
+    if (checkQuantityOfArray[0].quantity === props.stock) {
       return (
         <div>
           <div className="card  ">
@@ -24,7 +20,7 @@ export default function Product({ addProductToCart, ...props }) {
                     <h3>{props.name}</h3>
                     <div className="text">{props.description}</div>
                     <div className="price">
-                      <img src={coinsImg} alt="" />
+                      <img src={coinsImg} alt="coin" />
                       {props.price} Gil
                     </div>
                   </div>
@@ -41,12 +37,9 @@ export default function Product({ addProductToCart, ...props }) {
   return (
     <div>
       <div className="card">
-        {/* <div onClick={() => addProductToCart({ ...props })}></div> */}
-
         <div className="card_picture">
           <img className="game_thumb" src={props.image} />
           <div className="divider">
-            {/* make other flex column */}
             <div className="card_desc">
               <h3>{props.name}</h3>
               <div className="text">{props.description}</div>
@@ -56,7 +49,6 @@ export default function Product({ addProductToCart, ...props }) {
                 {props.price} Gil
               </div>
             </div>
-            {/* other opne */}
             <button onClick={() => addProductToCart({ ...props })}>Add to Basket</button>
           </div>
         </div>

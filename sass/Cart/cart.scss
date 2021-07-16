@@ -138,20 +138,27 @@
   }
 }
 
+// //////////////////////////////////
+// BASKET ACTIVE
+// //////////////////////////////////
 .basket_active {
   height: 77%;
-  width: 100vh;
   background-color: rgba(74, 216, 127, 1);
   z-index: 9999 !important;
   position: absolute;
-  //   right: 0;
+  right: 0;
   bottom: 0;
   left: 0;
   display: flex;
   flex-direction: column;
-  flex: 1 auto 1;
-  padding-left: 10rem;
+  padding-left: 18rem;
+  padding-right: 18rem;
 
+  .game_container {
+    order: 2;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
   .listOfProducts:first-child {
     border-top: none;
     padding-top: 0;
@@ -160,10 +167,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 80%;
+    width: 100%;
     margin-bottom: 1.5rem;
-    padding-top: 1.5rem;
-    border-top: 0.8px solid black;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid black;
 
     .left {
       display: flex;
@@ -208,4 +215,57 @@
       }
     }
   }
+  .btn {
+    order: 1;
+    width: 100%;
+    // height: 13rem;
+    margin-top: 2rem;
+    margin-bottom: 2.9rem;
+    text-align: center;
+    justify-content: center;
+    // align-items: flex-end;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      font-size: 0.7rem;
+      background: black;
+      color: white;
+      width: 7.5rem;
+      height: 2rem;
+      border-radius: 1rem;
+      border: none;
+      //   margin-bottom: 0.6rem;
+      z-index: 2;
+      cursor: pointer;
+      justify-content: center;
+    }
+  }
+  .total {
+    order: 3;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+    .total_text {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: rgba(73, 73, 71, 1);
+      margin-right: 3rem;
+    }
+    .total_price {
+      font-size: 1.2rem;
+      font-weight: 900;
+    }
+  }
+
+  h1 {
+    display: none;
+  }
+}
+
+// disabled btn
+.btn_emty {
+  opacity: 30%;
 }

@@ -4,6 +4,7 @@ import coinsImg from "/Users/durcak/Desktop/react-trial-master-99bbffd7a46731b7d
 import useOnClickOutside from "../../hooks/useOnClickOutside";
 
 export default function Cart({ isToggle, setToggle, carts, removeProductFromCart, clearCart }) {
+  const emptyCart = carts.length === 0;
   const [active, setActive] = useState(false);
   console.log(carts);
 
@@ -16,7 +17,7 @@ export default function Cart({ isToggle, setToggle, carts, removeProductFromCart
 
       {/* <div className={isToggle ? "expand" : "shrink"}> */}
       <div className="game_container">
-        {carts.length === 0 ? (
+        {emptyCart ? (
           <div className="item">
             <h2>No items</h2>
           </div>
@@ -41,17 +42,22 @@ export default function Cart({ isToggle, setToggle, carts, removeProductFromCart
           ))
         )}
       </div>
-      {carts.length === 0 ? null : (
+      {emptyCart ? null : (
         <div className="total">
           <div className="total_text">Total</div>
           <div className="total_price">{carts.reduce((amount, item) => item.product.price * item.quantity + amount, 0)} Gil</div>
         </div>
       )}
 
-      <div className="btn">
-        <button onClick={() => setActive(true)}>Continue</button>
-      </div>
-      {/* {carts.length !== 0 && <div onClick={() => clearCart()}>Clear Cart</div>} */}
+      {emptyCart && !active ? (
+        <div className="btn btn_emty">
+          <button>Continue</button>
+        </div>
+      ) : (
+        <div className="btn">
+          <button onClick={() => setActive(!active)}>{active ? "Go Back" : "Continue"}</button>
+        </div>
+      )}
     </div>
   );
 }
